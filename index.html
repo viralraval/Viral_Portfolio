@@ -1,1 +1,267 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"/><link rel="icon" href="/Viral_Portfolio/favicon.ico"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="theme-color" content="#000000"/><meta name="description" content="Web site created using create-react-app"/><link rel="apple-touch-icon" href="/Viral_Portfolio/logo192.png"/><link rel="manifest" href="/Viral_Portfolio/manifest.json"/><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Viral's Portfolio</title><link rel="stylesheet" media="screen" href="main.css"><link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"><link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><script src="main.js" type="text/babel"></script><title>Viral's Portfolio</title><link href="/Viral_Portfolio/static/css/main.dcfa8ac7.chunk.css" rel="stylesheet"></head><body><noscript>You need to enable JavaScript to run this app.</noscript><div id="root"></div><script>!function(e){function r(r){for(var n,a,i=r[0],c=r[1],l=r[2],p=0,s=[];p<i.length;p++)a=i[p],Object.prototype.hasOwnProperty.call(o,a)&&o[a]&&s.push(o[a][0]),o[a]=0;for(n in c)Object.prototype.hasOwnProperty.call(c,n)&&(e[n]=c[n]);for(f&&f(r);s.length;)s.shift()();return u.push.apply(u,l||[]),t()}function t(){for(var e,r=0;r<u.length;r++){for(var t=u[r],n=!0,i=1;i<t.length;i++){var c=t[i];0!==o[c]&&(n=!1)}n&&(u.splice(r--,1),e=a(a.s=t[0]))}return e}var n={},o={1:0},u=[];function a(r){if(n[r])return n[r].exports;var t=n[r]={i:r,l:!1,exports:{}};return e[r].call(t.exports,t,t.exports,a),t.l=!0,t.exports}a.e=function(e){var r=[],t=o[e];if(0!==t)if(t)r.push(t[2]);else{var n=new Promise((function(r,n){t=o[e]=[r,n]}));r.push(t[2]=n);var u,i=document.createElement("script");i.charset="utf-8",i.timeout=120,a.nc&&i.setAttribute("nonce",a.nc),i.src=function(e){return a.p+"static/js/"+({}[e]||e)+"."+{3:"6d1fbcae"}[e]+".chunk.js"}(e);var c=new Error;u=function(r){i.onerror=i.onload=null,clearTimeout(l);var t=o[e];if(0!==t){if(t){var n=r&&("load"===r.type?"missing":r.type),u=r&&r.target&&r.target.src;c.message="Loading chunk "+e+" failed.\n("+n+": "+u+")",c.name="ChunkLoadError",c.type=n,c.request=u,t[1](c)}o[e]=void 0}};var l=setTimeout((function(){u({type:"timeout",target:i})}),12e4);i.onerror=i.onload=u,document.head.appendChild(i)}return Promise.all(r)},a.m=e,a.c=n,a.d=function(e,r,t){a.o(e,r)||Object.defineProperty(e,r,{enumerable:!0,get:t})},a.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},a.t=function(e,r){if(1&r&&(e=a(e)),8&r)return e;if(4&r&&"object"==typeof e&&e&&e.__esModule)return e;var t=Object.create(null);if(a.r(t),Object.defineProperty(t,"default",{enumerable:!0,value:e}),2&r&&"string"!=typeof e)for(var n in e)a.d(t,n,function(r){return e[r]}.bind(null,n));return t},a.n=function(e){var r=e&&e.__esModule?function(){return e.default}:function(){return e};return a.d(r,"a",r),r},a.o=function(e,r){return Object.prototype.hasOwnProperty.call(e,r)},a.p="/Viral_Portfolio/",a.oe=function(e){throw console.error(e),e};var i=this["webpackJsonpmy-react-app"]=this["webpackJsonpmy-react-app"]||[],c=i.push.bind(i);i.push=r,i=i.slice();for(var l=0;l<i.length;l++)r(i[l]);var f=c;t()}([])</script><script src="/Viral_Portfolio/static/js/2.7a531390.chunk.js"></script><script src="/Viral_Portfolio/static/js/main.474debc6.chunk.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Viral Raval — Portfolio</title>
+
+<!-- Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+/* ===== GENERAL ===== */
+:root {
+  --bg: #0d1117;
+  --glass: rgba(255, 255, 255, 0.08);
+  --border: rgba(255, 255, 255, 0.14);
+  --accent: #0fffc1;
+  --accent2: #5d5fef;
+  --white: #ffffff;
+  --muted: #b4bcd0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: radial-gradient(circle at top, #101625, #06090f);
+  font-family: "Poppins", sans-serif;
+  color: var(--white);
+  padding: 40px 20px;
+  min-height: 100vh;
+}
+
+/* ===== LAYOUT ===== */
+.container {
+  max-width: 1150px;
+  margin: auto;
+}
+
+/* ===== HERO ===== */
+.hero {
+  text-align: center;
+  padding: 50px 20px;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.hero h1 {
+  font-size: 40px;
+  font-weight: 800;
+  margin-bottom: 10px;
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+  max-width: 650px;
+  margin: auto;
+  font-size: 16px;
+  color: var(--muted);
+}
+
+/* FLOATING GLOW CIRCLES */
+.glow {
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  background: radial-gradient(circle, var(--accent), transparent 60%);
+  filter: blur(80px);
+  z-index: -1;
+  border-radius: 50%;
+  animation: float 6s infinite alternate;
+}
+.glow2 {
+  right: -60px;
+  top: 20px;
+  background: radial-gradient(circle, var(--accent2), transparent 60%);
+  animation-duration: 7s;
+}
+
+@keyframes float {
+  from { transform: translateY(0px); }
+  to { transform: translateY(40px); }
+}
+
+/* ===== GLASS CARDS ===== */
+.card {
+  background: var(--glass);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  padding: 22px;
+  border-radius: 18px;
+  margin-bottom: 30px;
+  transition: 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-6px);
+  border-color: var(--accent);
+}
+
+/* ===== SECTIONS ===== */
+.section-title {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ===== TECH GRID ===== */
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
+}
+.tech-item {
+  padding: 12px;
+  background: var(--glass);
+  border: 1px solid var(--border);
+  text-align: center;
+  border-radius: 10px;
+  font-weight: 600;
+  color: var(--white);
+  font-size: 14px;
+}
+
+/* ===== PROJECTS ===== */
+.project {
+  padding: 16px;
+  border-radius: 14px;
+  background: var(--glass);
+  border: 1px solid var(--border);
+  margin-bottom: 16px;
+}
+.project h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+.project p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* ===== CONTACT ===== */
+.contact-item {
+  margin-bottom: 10px;
+  color: var(--muted);
+}
+.contact-item a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  margin-top: 40px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="glow"></div>
+    <div class="glow glow2"></div>
+
+    <h1>Viral Raval</h1>
+    <p>Data Engineer • Azure • Databricks • PySpark • Microsoft Fabric • Power BI  
+    Building clean, scalable and modern data systems.</p>
+  </section>
+
+  <!-- ABOUT -->
+  <div class="card">
+    <h2 class="section-title">About Me</h2>
+    <p>I am a passionate developer focused on **Data Engineering, ETL/ELT Design, Cloud Pipelines, Automation, and Dashboards**.  
+    Love solving engineering problems with clean logic, scalability, and creativity.</p>
+  </div>
+
+  <!-- TECH STACK -->
+  <div class="card">
+    <h2 class="section-title">Tech Stack</h2>
+    <div class="tech-grid">
+      <div class="tech-item">Python</div>
+      <div class="tech-item">SQL</div>
+      <div class="tech-item">Databricks</div>
+      <div class="tech-item">PySpark</div>
+      <div class="tech-item">Microsoft Fabric</div>
+      <div class="tech-item">Azure Data Factory</div>
+      <div class="tech-item">Power BI / DAX</div>
+      <div class="tech-item">React</div>
+      <div class="tech-item">Tailwind CSS</div>
+      <div class="tech-item">Data Modeling</div>
+      <div class="tech-item">CI/CD (Azure DevOps)</div>
+      <div class="tech-item">OpenCV</div>
+    </div>
+  </div>
+
+  <!-- PROJECTS -->
+  <div class="card">
+    <h2 class="section-title">Projects</h2>
+
+    <div class="project">
+      <h3>Dataset Explainer (AI + Streamlit)</h3>
+      <p>Conversational tool to analyze datasets, auto-create charts, find correlations & generate insights.</p>
+    </div>
+
+    <div class="project">
+      <h3>Satellite Image Stitching</h3>
+      <p>Stitches satellite tiles using ORB feature matching and 3D texture mapping for terrain generation.</p>
+    </div>
+
+    <div class="project">
+      <h3>Palette-X</h3>
+      <p>A web-based color palette generator & tester for UI/UX teams.</p>
+    </div>
+  </div>
+
+  <!-- CERTIFICATIONS -->
+  <div class="card">
+    <h2 class="section-title">Certifications</h2>
+    <p class="muted">
+      • Microsoft Fabric Data Engineer Associate <br>
+      • Fabric Analytics Engineer Associate <br>
+      • Azure Cosmos DB Developer <br>
+      • Tableau BI & Analytics  
+    </p>
+  </div>
+
+  <!-- EDUCATION -->
+  <div class="card">
+    <h2 class="section-title">Education</h2>
+    <p class="muted">
+      <strong>B.E. Computer Engineering</strong> — Mumbai University (CGPA: 9.12)<br>
+      <strong>Diploma Computer Engineering</strong> — K. J. Somaiya Polytechnic (90.6%)
+    </p>
+  </div>
+
+  <!-- CONTACT -->
+  <div class="card">
+    <h2 class="section-title">Contact</h2>
+    <p class="contact-item">📧 Email: <a href="mailto:rawalviral319@gmail.com">rawalviral319@gmail.com</a></p>
+    <p class="contact-item">🔗 LinkedIn: <a href="https://linkedin.com/in/viral-raval" target="_blank">linkedin.com/in/viral-raval</a></p>
+    <p class="contact-item">💻 GitHub: <a href="https://github.com/viralraval" target="_blank">github.com/viralraval</a></p>
+    <p class="contact-item">📱 Phone: +91 8898441792</p>
+  </div>
+
+  <footer>
+    © Viral Raval — Modern Portfolio • Built without company work, only skills.
+  </footer>
+</div>
+
+</body>
+</html>
